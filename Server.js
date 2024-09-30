@@ -63,7 +63,13 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-app.use(cors()); // Allow CORS for cross-origin requests
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    credentials: true,
+  })
+); // Allow CORS for cross-origin requests
 app.use(bodyParser.json()); // Parse incoming request body
 
 // Test route for Vercel deployment
