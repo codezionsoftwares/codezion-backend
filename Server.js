@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://codezion-iwci.vercel.app"],
+    origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
